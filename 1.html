@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+  <html lang="pt-br">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1. O Significado Bíblico - AVANCE</title>
+    <style>
+        :root { --primary: #0056b3; --text: #333; --bg: #ffffff; }
+        body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; padding: 0; background: var(--bg); color: var(--text); line-height: 1.6; }
+        .header-img { width: 100%; max-height: 300px; object-fit: cover; }
+        .container { max-width: 800px; margin: 0 auto; padding: 20px; }
+        h1 { color: var(--primary); font-size: 1.8rem; margin-top: 20px; }
+        h2 { color: var(--primary); font-size: 1.4rem; border-left: 4px solid var(--primary); padding-left: 10px; margin-top: 30px; }
+        p { font-size: 1.15rem; margin-bottom: 15px; text-align: left; }
+        
+        /* Animação Didática CSS - Morte e Ressurreição */
+        .area-animacao {
+            background: #e7f1ff; height: 200px; border-radius: 15px;
+            display: flex; flex-direction: column; align-items: center; justify-content: center;
+            margin: 25px 0; overflow: hidden; position: relative; border: 1px solid #b3d7ff;
+        }
+        .onda { position: absolute; bottom: 0; width: 100%; height: 50px; background: #0056b3; opacity: 0.6; }
+        .corpo { 
+            width: 40px; height: 40px; background: #333; border-radius: 50%;
+            animation: batismo 4s infinite ease-in-out; position: relative;
+        }
+        @keyframes batismo {
+            0%, 100% { transform: translateY(-40px); background: #333; } /* Fora da água */
+            40%, 60% { transform: translateY(40px); background: #0056b3; } /* Submerso */
+            80% { transform: translateY(-40px); background: #f1c40f; } /* Ressurreição/Luz */
+        }
+        .legenda-animacao { font-weight: bold; margin-top: 60px; font-size: 0.9rem; color: #0056b3; }
+
+        .citacao { background: #f0f0f0; padding: 20px; border-radius: 10px; font-style: italic; margin: 20px 0; }
+        
+        .controles-acessibilidade { 
+            position: sticky; top: 0; background: white; padding: 10px; 
+            display: flex; gap: 10px; border-bottom: 1px solid #eee; z-index: 100;
+        }
+        .btn-audio { background: #28a745; color: white; border: none; padding: 10px; border-radius: 5px; cursor: pointer; }
+        
+        .btn-concluido { 
+            display: block; width: 100%; padding: 20px; background: var(--primary); 
+            color: white; text-decoration: none; border-radius: 10px; 
+            font-weight: bold; font-size: 1.2rem; text-align: center; margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper><div class="vw-plugin-top-wrapper"></div></div>
+    </div>
+ <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+ <script>new window.VLibras.Widget('https://vlibras.gov.br/app');</script>
+
+    <div class="controles-acessibilidade">
+        <button onclick="lerTexto()" class="btn-audio">🔊 Ouvir Lição</button>
+        <button onclick="pararLeitura()" style="background:#dc3545; color:white; border:none; border-radius:5px; padding:10px;">🛑 Parar</button>
+    </div>
+
+    <img src="1-img.png" alt="O Significado Bíblico" class="header-img">
+
+    <div class="container" id="conteudo-leitura">
+        <h1>1. O Significado Bíblico</h1>
+        <p>A fundamentação do seu passo de fé</p>
+
+        <h2>Arrependimento: Metanoia</h2>
+        <p>O batismo começa antes de você entrar na água. Ele nasce no arrependimento. No grego bíblico, a palavra usada é Metanoia, que significa literalmente "mudança de mente".</p>
+        <p>Não é apenas sentir remorso, mas decidir mudar a direção da sua vida. Você estava caminhando para longe de Deus e, agora, decide caminhar em direção a Ele. É o abandono do pecado para o abraço da graça.</p>
+
+        <h2>Identificação com Cristo</h2>
+        <p>O batismo é um sermão visual. Quando você é mergulhado, você está proclamando ao mundo que a sua "velha natureza" morreu e foi sepultada com Jesus.</p>
+
+        <div class="area-animacao">
+            <div class="corpo"></div>
+            <div class="onda"></div>
+            <p class="legenda-animacao">Submersão = Sepultamento | Emersão = Nova Vida</p>
+        </div>
+
+        <p>Ao sair da água, você simboliza a ressurreição. Assim como Cristo venceu a morte, você se levanta para uma nova vida. Você não é mais o mesmo; agora, sua identidade está ligada a Ele.</p>
+
+        <h2>A Obediência: Um Mandamento, não um Convite</h2>
+        <p>Muitos pensam no batismo como uma "opção" para cristãos extras, mas a Bíblia o apresenta como um ato de obediência direta ao Senhorio de Cristo.</p>
+
+        <div class="citacao">
+            <br>"Portanto, ide, fazei discípulos de todas as nações, batizando-os em nome do Pai, e do Filho, e do Espírito Santo."<br>
+            <strong>— Mateus 28:19</strong>
+        </div>
+
+        <p>Jesus não apenas ordenou, Ele deu o exemplo. Ao se batizar, você ultrapassa o limite da indecisão e entra no terreno da aliança pública com Deus. É o seu selo de compromisso com o Reino.</p>
+    </div>
+    
+            <h1>2. Requisitos Bíblicos</h1>
+            <p>Quem pode ser batizado? Entenda o que a Bíblia exige para este passo.</p>
+
+            <h2>1. Crer de Todo o Coração</h2>
+            <p>O primeiro requisito não é ter um currículo religioso perfeito, mas sim a fé genuína. No encontro entre Filipe e o eunuco etíope, a pergunta foi clara: "O que impede que eu seja batizado?"</p>
+            
+            <div class="citacao-biblica">
+                "E disse Filipe: É lícito, se crês de todo o coração..." <br>
+                <strong>— Atos 8:37</strong>
+            </div>
+
+            <div class="card-requisito">
+                <span class="check-icon">✓</span>
+                <span><strong>Fé Pessoal:</strong> O batismo é para quem já recebeu a semente da fé.</span>
+            </div>
+
+            <h2>2. Confissão de Fé</h2>
+            <p>O batismo é um testemunho público. Não basta crer "no seu íntimo"; é necessário declarar que Jesus Cristo é o seu único Senhor e Salvador. É a exteriorização de uma realidade interna.</p>
+            
+            <div class="card-requisito">
+                <span class="check-icon">✓</span>
+                <span><strong>Declaração Pública:</strong> Assumir o compromisso diante de Deus e da igreja.</span>
+            </div>
+
+            <h2>3. Frutos de Arrependimento</h2>
+            <p>João Batista enfatizava: "Produzi, pois, frutos dignos de arrependimento". O batismo não apaga pecados de forma mágica; ele é a celebração de alguém que já decidiu abandonar as práticas que desagradam a Deus.</p>
+
+            <div class="card-requisito">
+                <span class="check-icon">✓</span>
+                <span><strong>Mudança Prática:</strong> Uma vida que reflete a nova direção escolhida.</span>
+            </div>
+
+            <h2>Conclusão</h2>
+            <p>Se você reconhece sua necessidade de Cristo e decidiu segui-lo, você está pronto. O batismo não é para os "perfeitos", mas para os "redimidos" que desejam ultrapassar os limites da velha vida.</p>
+        </div>
+
+        <a href="index.html" class="btn-concluido">CONCLUÍDO - VOLTAR AO MENU</a>
+    </div>
+
+    <script>
+        let synth = window.speechSynthesis;
+        let utterance;
+
+        function lerTexto() {
+            synth.cancel(); // Para qualquer leitura anterior
+            const textoParaLer = document.getElementById('conteudo-leitura').innerText;
+            utterance = new SpeechSynthesisUtterance(textoParaLer);
+            utterance.lang = 'pt-BR';
+            utterance.rate = 1.0; // Velocidade normal
+            synth.speak(utterance);
+        }
+
+        function pararLeitura() {
+            synth.cancel();
+        }
+    </script>
+</body>
+</html>

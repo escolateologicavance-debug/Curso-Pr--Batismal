@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AVANCE</title>
+    <link rel="manifest" href="manifest.json">
+    <style>
+        /* Estilo Século 21: Limpo e Intuitivo */
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            text-align: center; 
+            background-color: #ffffff; 
+            margin: 0; 
+            padding: 20px; 
+            display: flex; 
+            flex-direction: column; 
+            align-items: center;
+        }
+        
+        .logo-principal { 
+            width: 100%; 
+            max-width: 512px; 
+            height: auto; 
+            margin-bottom: 10px;
+            animation: fadeIn 1.5s ease-in;
+        }
+
+        .info-topo { margin-bottom: 30px; }
+        .titulo { font-size: 24px; font-weight: bold; color: #003366; margin: 0; }
+        .slogan { font-size: 16px; color: #666; font-style: italic; }
+
+        .menu-lista { 
+            display: flex; 
+            flex-direction: column; 
+            width: 100%; 
+            max-width: 400px; 
+            gap: 15px; 
+        }
+
+        .btn-tema { 
+            display: block; 
+            padding: 20px; 
+            background-color: #0056b3; 
+            color: white; 
+            text-decoration: none; 
+            border-radius: 15px; 
+            font-weight: bold; 
+            font-size: 18px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.2s, background-color 0.3s;
+        }
+
+        .btn-tema:active { 
+            transform: scale(0.95); 
+            background-color: #003d80; 
+        }
+
+        footer { 
+            margin-top: 40px; 
+            font-size: 14px; 
+            color: #888; 
+            line-height: 1.5;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <img src="logo-512.png" alt="Logo AVANCE" class="logo-principal">
+
+    <div class="info-topo">
+        <p class="titulo">AVANCE</p>
+        <p class="slogan">"ultrapassando limites!"</p>
+    </div>
+
+    <div class="menu-lista">
+        <a href="1.html" class="btn-tema">1. Significado do Batismo</a>
+        <a href="2.html" class="btn-tema">2. Requisitos para o Batismo</a>
+        <a href="3.html" class="btn-tema">3. Simbolismo da Imersão</a>
+        <a href="4.html" class="btn-tema">4. O Dia da Cerimônia</a>
+        <a href="5.html" class="btn-tema">5. Vida Pós-Batismo</a>
+        <a href="6.html" class="btn-tema">6. Orientações Gerais</a>
+    </div>
+
+    <footer>
+        <strong>Preparação Pré-Batismal</strong><br>
+        Gilberto Moreira<br>
+        Itanhangá-MT/BR
+    </footer>
+
+    <script>
+        // Registro do Service Worker para funcionar Offline
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('sw.js')
+            .then(() => console.log("AVANCE: Pronto para uso offline."))
+            .catch(err => console.log("Erro no SW:", err));
+        }
+    </script>
+
+</body>
+</html>
