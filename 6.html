@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>6. Orientações Gerais - AVANCE</title>
+    <style>
+        :root { --primary: #003366; --warning: #ffcc00; --text: #222; --bg: #ffffff; }
+        body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; padding: 0; background: var(--bg); color: var(--text); line-height: 1.8; }
+        .container { max-width: 800px; margin: 0 auto; padding: 20px; }
+        
+        .area-botoes-audio { position: sticky; top: 0; background: white; padding: 10px 0; border-bottom: 2px solid #eee; z-index: 100; display: flex; gap: 10px; }
+        .btn-audio { flex: 1; padding: 15px; border: none; border-radius: 12px; font-weight: bold; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px; }
+        .btn-ouvirl { background-color: #28a745; color: white; }
+        .btn-parar { background-color: #dc3545; color: white; }
+
+        h1 { color: var(--primary); border-bottom: 3px solid var(--primary); display: inline-block; }
+        h2 { color: var(--primary); margin-top: 30px; }
+
+        /* Alerta de Segurança */
+        .alerta-seguranca { background: #fffdf0; border: 3px solid var(--warning); padding: 20px; border-radius: 15px; margin: 25px 0; position: relative; }
+        .triangulo { font-size: 40px; display: block; text-align: center; animation: flash 1.5s infinite; }
+        @keyframes flash { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
+
+        /* Instruções Técnicas */
+        .instrucao-tecnica { background: #e7f1ff; padding: 20px; border-radius: 15px; border-left: 8px solid var(--primary); margin-bottom: 30px; }
+
+        /* Postura Cristã (Clicável) */
+        .postura-section { border: 1px solid #ddd; border-radius: 10px; margin-bottom: 10px; overflow: hidden; }
+        .postura-header { background: var(--primary); color: white; padding: 15px; width: 100%; border: none; text-align: left; font-size: 1.1rem; font-weight: bold; cursor: pointer; display: flex; justify-content: space-between; }
+        .postura-content { padding: 20px; display: none; background: #f9f9f9; }
+
+        /* Animação da Brasa */
+        .area-brasa { text-align: center; padding: 20px; }
+        .brasa { font-size: 50px; filter: grayscale(0%); transition: 0.5s; cursor: pointer; display: inline-block; }
+        .brasa.apagada { filter: grayscale(100%); opacity: 0.5; }
+
+        .btn-concluido { display: block; width: 100%; padding: 22px; background: var(--primary); color: white; text-decoration: none; border-radius: 12px; font-weight: bold; font-size: 1.3rem; text-align: center; margin-top: 50px; }
+    </style>
+</head>
+<body>
+
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper><div class="vw-plugin-top-wrapper"></div></div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>new window.VLibras.Widget('https://vlibras.gov.br/app');</script>
+
+    <div class="container">
+        <div class="area-botoes-audio">
+            <button onclick="lerTexto()" class="btn-audio btn-ouvirl">🔊 Ouvir</button>
+            <button onclick="pararLeitura()" class="btn-audio btn-parar">🛑 Parar</button>
+        </div>
+
+        <div id="conteudo-para-ler">
+            <h1>6. Orientações Gerais</h1>
+            
+            <div class="alerta-seguranca">
+                <span class="triangulo">⚠️</span>
+                <p><strong>ATENÇÃO:</strong> No ato da imersão, certifique-se de que não há celular, carteira, dinheiro ou qualquer objeto que possa molhar em seus bolsos. Tenha cuidado redobrado para não perder anéis ou alianças na água durante o movimento.</p>
+            </div>
+
+            <div class="instrucao-tecnica">
+                <h2>Importante: Técnica de Imersão</h2>
+                <p>Para sua segurança e conforto: obstrua as narinas com as mãos em forma de máscara, pressione com força o nariz e segure o fôlego, mantendo olhos e boca fechados no momento da imersão. </p>
+                <p>O ministro segurará suas mãos (que estarão em forma de máscara) com uma mão, enquanto a outra apoiará sua cabeça por trás, conduzindo-o suavemente. A imersão dura de 3 a 4 segundos, logo após a frase: <i>"Diante dessas testemunhas, te batizo em Nome do Pai, do Filho e do Espírito Santo!"</i></p>
+                <p>Aprenda esses cuidados agora para que, na hora, sua mente esteja livre para adorar. É comum pessoas receberem o batismo com o Espírito Santo ao submergirem; esteja sensível ao Senhor!</p>
+            </div>
+
+            <h2>Postura Cristã (Clique nos tópicos abaixo)</h2>
+
+            <div class="postura-section">
+                <button class="postura-header" onclick="toggleSection('p1')">Testemunho Irrepreensível <span>+</span></button>
+                <div id="p1" class="postura-content">
+                    <p>A caminhada exige avanço (Hebreus 6:1). Sua conduta deve ser pautada pela prudência. Evite dar ou receber caronas de pessoas do gênero oposto em ambientes isolados, nem entre em residências nesse contexto para preservar sua honra e evitar o escândalo. A exceção é apenas em casos de extrema urgência ou risco de vida, onde a omissão de socorro seria crime. Fuja da aparência do mal (1 Ts 5:22).</p>
+                </div>
+            </div>
+
+            <div class="postura-section">
+                <button class="postura-header" onclick="toggleSection('p2')">Vida Eclesiástica Ativa <span>+</span></button>
+                <div id="p2" class="postura-content">
+                    <p>Uma brasa longe do fogo se apaga rapidamente. Assim é o cristão longe da comunhão. Clique na brasa abaixo para ver o que acontece quando nos afastamos do corpo:</p>
+                    <div class="area-brasa">
+                        <div id="brasa-img" class="brasa" onclick="this.classList.toggle('apagada')">🔥</div>
+                        <p><small>(Toque na brasa para afastar/aproximar)</small></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="postura-section">
+                <button class="postura-header" onclick="toggleSection('p3')">A Mesa e a Ceia do SENHOR <span>+</span></button>
+                <div id="p3" class="postura-content">
+                    <p>A Ceia do SENHOR conserva sua comunhão com Cristo através do Corpo. Abster-se da Ceia é um ato de autodisciplina que exige intervenção ministerial para tratar o deslize. Nada justifica a ausência: discussões no trânsito ou com o cônjuge não são motivos para se privar. Ao deixar de comungar, você desmerece o sacrifício de Jesus, afirmando implicitamente que Ele não é capaz de perdoar ou que o Espírito Santo não pode reabilitar seu coração de mágoas e rancores.</p>
+                </div>
+            </div>
+
+            <div class="postura-section">
+                <button class="postura-header" onclick="toggleSection('p4')">Conduta Social, Familiar e Profissional <span>+</span></button>
+                <div id="p4" class="postura-content">
+                    <p><strong>Familiar:</strong> Seja o exemplo de Cristo em casa. Honre pais, ame o cônjuge e eduque os filhos no temor do Senhor.</p>
+                    <p><strong>Profissional:</strong> Trabalhe como se fosse para o Senhor. Seja honesto, pontual e fuja de subornos ou fofocas.</p>
+                    <p><strong>Social:</strong> Sua luz deve brilhar. Seja conhecido pelo amor, pela temperança e pelo respeito às autoridades e ao próximo.</p>
+                </div>
+            </div>
+
+            <p><i>Nota Final: O batismo é o início de um compromisso eterno. Memorize estas orientações para que sua experiência seja plena e sem distrações.</i></p>
+        </div>
+
+        <a href="index.html" class="btn-concluido">FINALIZAR CURSO - IR AO MENU</a>
+    </div>
+
+    <script>
+        function toggleSection(id) {
+            const content = document.getElementById(id);
+            content.style.display = content.style.display === "block" ? "none" : "block";
+        }
+
+        let synth = window.speechSynthesis;
+        function lerTexto() {
+            synth.cancel();
+            const texto = document.getElementById('conteudo-para-ler').innerText;
+            const utterance = new SpeechSynthesisUtterance(texto);
+            utterance.lang = 'pt-BR';
+            synth.speak(utterance);
+        }
+        function pararLeitura() { synth.cancel(); }
+    </script>
+</body>
+</html>
