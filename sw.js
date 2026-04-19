@@ -15,7 +15,8 @@ const assets = [
   '3-img.png',
   '4-img.png',
   '5-img.png',
-  '6-img.png'
+  '6-img.png',
+  'a-felicidade.mp3' 
 ];
 
 self.addEventListener('install', event => {
