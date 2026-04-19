@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2. Requisitos e Preparação - AVANCE</title>
+    <style>
+        :root { --primary: #0056b3; --accent: #28a745; --text: #333; --bg: #ffffff; }
+        body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; padding: 0; background: var(--bg); color: var(--text); line-height: 1.8; }
+        .container { max-width: 800px; margin: 0 auto; padding: 20px; }
+        
+        /* Controles de Áudio */
+        .area-botoes-audio { position: sticky; top: 0; background: white; padding: 10px 0; border-bottom: 2px solid #eee; z-index: 100; display: flex; gap: 10px; }
+        .btn-audio { flex: 1; padding: 15px; border: none; border-radius: 12px; font-weight: bold; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px; font-size: 1rem; }
+        .btn-ouvirl { background-color: var(--accent); color: white; }
+        .btn-parar { background-color: #dc3545; color: white; }
+
+        .header-img { width: 100%; max-height: 300px; object-fit: cover; border-radius: 0 0 20px 20px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+        
+        h1 { color: var(--primary); font-size: 2rem; margin-top: 25px; border-bottom: 3px solid var(--primary); display: inline-block; }
+        h2 { color: var(--primary); font-size: 1.5rem; margin-top: 40px; display: flex; align-items: center; }
+        p { font-size: 1.2rem; margin-bottom: 20px; text-align: justify; }
+
+        /* Animação CSS Puro: A Transformação do Coração */
+        .box-animacao {
+            background: #f0f7ff;
+            padding: 40px;
+            border-radius: 20px;
+            margin: 30px 0;
+            text-align: center;
+            border: 2px solid var(--primary);
+            position: relative;
+            overflow: hidden;
+        }
+        .coracao {
+            font-size: 80px;
+            display: inline-block;
+            animation: transformar 5s infinite;
+        }
+        @keyframes transformar {
+            0% { content: '🖤'; color: #888; transform: scale(1); filter: grayscale(100%); }
+            50% { content: '❤️'; color: #e74c3c; transform: scale(1.3); filter: grayscale(0%); }
+            100% { content: '❤️'; color: #e74c3c; transform: scale(1); filter: grayscale(0%); }
+        }
+        .barra-alianca {
+            width: 0%;
+            height: 10px;
+            background: var(--primary);
+            margin-top: 20px;
+            border-radius: 5px;
+            animation: carregar 4s forwards cubic-bezier(0.1, 0.7, 1.0, 0.1);
+        }
+        @keyframes carregar { to { width: 100%; } }
+        .legenda-animacao { font-weight: bold; color: var(--primary); margin-top: 15px; display: block; }
+
+        .citacao-biblica { background: #f4f4f4; padding: 25px; border-radius: 15px; font-style: italic; margin: 30px 0; border-left: 8px solid var(--primary); font-size: 1.1rem; }
+        
+        .btn-concluido { display: block; width: 100%; padding: 22px; background: var(--primary); color: white; text-decoration: none; border-radius: 12px; font-weight: bold; font-size: 1.3rem; text-align: center; margin-top: 50px; box-shadow: 0 6px 15px rgba(0,86,179,0.3); }
+    </style>
+</head>
+<body>
+
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper><div class="vw-plugin-top-wrapper"></div></div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>new window.VLibras.Widget('https://vlibras.gov.br/app');</script>
+
+    <div class="container">
+        <div class="area-botoes-audio">
+            <button onclick="lerTexto()" class="btn-audio btn-ouvirl">🔊 Ouvir Conteúdo</button>
+            <button onclick="pararLeitura()" class="btn-audio btn-parar">🛑 Parar Áudio</button>
+        </div>
+
+        <img src="2-img.png" alt="Requisitos e Preparação" class="header-img">
+
+        <div id="conteudo-para-ler">
+            <h1>2. Requisitos Bíblicos</h1>
+            
+            <p>O batismo nas águas não deve ser encarado como um rito de passagem social ou uma formalidade religiosa de rotina. Para o cristianismo bíblico, este ato exige uma preparação interna rigorosa e o preenchimento de requisitos que validam a experiência espiritual diante de Deus e da comunidade dos santos.</p>
+
+            <h2>A Centralidade da Fé: Crer de Todo o Coração</h2>
+            <p>O requisito fundamental e inegociável para o batismo é a posse de uma fé salvífica e regeneradora. Não se trata de uma anuência intelectual aos fatos históricos sobre Jesus, mas de uma entrega total à Sua soberania. No diálogo registrado em Atos capítulo 8, o eunuco etíope questiona Filipe sobre o que o impediria de descer às águas. A resposta de Filipe estabelece o padrão de ouro para todos os séculos: a licitude do batismo está condicionada ao "crer de todo o coração".</p>
+            
+            <div class="citacao-biblica">
+                "E disse Filipe: É lícito, se crês de todo o coração. E, respondendo ele, disse: Creio que Jesus Cristo é o Filho de Deus." <br>
+                <strong>— Atos 8:37</strong>
+            </div>
+            <p>Essa confissão não é apenas verbal; ela é o resultado de uma alma que reconheceu sua incapacidade espiritual e depositou em Cristo a sua única esperança de redenção. Sem esta fé pessoal, o mergulho nas águas torna-se apenas um banho físico, destituído de valor espiritual eterno.</p>
+
+            <h2>A Confissão Pública: O Homologeo</h2>
+            <p>O segundo requisito é a disposição para a confissão pública. No original grego, a palavra para confissão é <em>Homologeo</em>, que significa "dizer a mesma coisa que Deus diz". Quando o candidato desce às águas, ele está concordando com Deus sobre seu estado de pecado e sobre a necessidade de salvação em Jesus.</p>
+
+            <div class="box-animacao">
+                <span class="coracao">❤️</span>
+                <div class="barra-alianca"></div>
+                <span class="legenda-animacao">ALIANÇA PÚBLICA: A Identidade Restaurada</span>
+            </div>
+
+            <p>O batismo é o momento em que a decisão individual torna-se um testemunho coletivo. O candidato "ultrapassa os limites" da privacidade espiritual para assumir publicamente o senhorio de Cristo. É a assinatura de um compromisso que rompe com as alianças do passado e estabelece uma nova cidadania no Reino de Deus. Esta confissão deve ser firme, consciente e livre de coação externa.</p>
+
+            <h2>Frutos Dignos de Arrependimento</h2>
+            <p>João Batista, o precursor, confrontava os religiosos de sua época exigindo que apresentassem "frutos dignos de arrependimento" antes de buscarem o batismo. Este requisito aponta para a eficácia da transformação. O arrependimento não é um sentimento passageiro de culpa, mas uma mudança de direção prática e objetiva.</p>
+            
+            <p>A vida de quem pleiteia o batismo deve evidenciar que as práticas, vícios e comportamentos da "velha vida" estão sendo subjugados pela presença do Espírito Santo. O batismo não é um meio para se obter o arrependimento, mas a evidência pública de que o arrependimento já ocorreu. É a celebração de uma vida que já começou a refletir a luz de Cristo no cotidiano.</p>
+
+            <h2>Conclusão da Prontidão</h2>
+            <p>Concluímos que a prontidão para o batismo é alcançada quando a fé, a confissão e o arrependimento convergem na vida do crente. Se você compreende a magnitude desta decisão e seu coração arde por obedecer ao mandamento do Senhor, você está pronto para selar esta aliança. O batismo aguarda aqueles que, com consciência plena, desejam morrer para o mundo e ressurgir para uma caminhada de santidade e serviço no Reino de Deus.</p>
+        </div>
+
+        <a href="index.html" class="btn-concluido">CONCLUÍDO - VOLTAR AO MENU</a>
+    </div>
+
+    <script>
+        let synth = window.speechSynthesis;
+        function lerTexto() {
+            synth.cancel();
+            const texto = document.getElementById('conteudo-para-ler').innerText;
+            const utterance = new SpeechSynthesisUtterance(texto);
+            utterance.lang = 'pt-BR';
+            utterance.rate = 1.0;
+            synth.speak(utterance);
+        }
+        function pararLeitura() { synth.cancel(); }
+    </script>
+</body>
+</html>
