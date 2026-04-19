@@ -52,6 +52,14 @@
             <button onclick="lerTexto()" class="btn-audio btn-ouvirl">🔊 Ouvir</button>
             <button onclick="pararLeitura()" class="btn-audio btn-parar">🛑 Parar</button>
         </div>
+        <div style="text-align: center; margin: 20px 0; padding: 15px; background: #f0f7ff; border-radius: 12px; border: 1px solid #003366;">
+    <p style="margin: 0 0 10px 0; font-weight: bold; color: #003366;"> Hino:</p>
+    <button onclick="document.getElementById('musica_fundo').play()" style="padding: 10px 20px; background: #003366; color: white; border: none; border-radius: 8px; font-weight: bold; cursor: pointer;"> Play</button>
+    <button onclick="document.getElementById('musica_fundo').pause()" style="padding: 10px 20px; background: #666; color: white; border: none; border-radius: 8px; font-weight: bold; cursor: pointer; margin-left: 5px;"> Pausar</button>
+</div>
+
+<audio id="musica_fundo" src="a-felicidade.mp3"></audio>
+
 
         <div id="conteudo-para-ler">
             <h1>6. Orientações Gerais</h1>
