@@ -16,18 +16,18 @@ const assets = [
   '4-img.png',
   '5-img.png',
   '6-img.png',
-  'a-felicidade.mp3' 
+    'a-felicidade.mp3'
 ];
 
-self.addEventListener('install', event => {
-  event.waitUntil(
-    caches.open(CACHE_NAME).then(cache => {
-      return cache.addAll(assets);
-    })
-  );
-});
-
 self.addEventListener('fetch', event => {
+  // Se for áudio, tenta rede primeiro para evitar erro de Range Request do cache
+  if (event.request.url.endsWith('.mp3')) {
+    event.respondWith(
+      fetch(event.request).catch(() => caches.match(event.request))
+    );
+    return;
+  }
+
   event.respondWith(
     caches.match(event.request).then(response => {
       return response || fetch(event.request);
