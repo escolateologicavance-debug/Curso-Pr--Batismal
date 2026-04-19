@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5. Vida Pós-Batismo - AVANCE</title>
+    <style>
+        :root { --primary: #004a99; --accent: #28a745; --text: #333; --bg: #ffffff; }
+        body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; padding: 0; background: var(--bg); color: var(--text); line-height: 1.8; }
+        .container { max-width: 800px; margin: 0 auto; padding: 20px; }
+        
+        .area-botoes-audio { position: sticky; top: 0; background: white; padding: 10px 0; border-bottom: 2px solid #eee; z-index: 100; display: flex; gap: 10px; }
+        .btn-audio { flex: 1; padding: 15px; border: none; border-radius: 12px; font-weight: bold; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px; }
+        .btn-ouvirl { background-color: var(--accent); color: white; }
+        .btn-parar { background-color: #dc3545; color: white; }
+
+        .header-img { width: 100%; max-height: 250px; object-fit: cover; border-radius: 0 0 20px 20px; }
+        
+        h1 { color: var(--primary); font-size: 1.8rem; margin-top: 25px; border-bottom: 3px solid var(--primary); display: inline-block; }
+        h2 { color: var(--primary); font-size: 1.4rem; margin-top: 35px; border-left: 5px solid var(--primary); padding-left: 10px; }
+        p { font-size: 1.2rem; text-align: justify; margin-bottom: 20px; }
+
+        /* Animação CSS: Ceia do SENHOR */
+        .area-ceia {
+            background: #fdf2e9; padding: 40px; border-radius: 20px; margin: 30px 0;
+            text-align: center; border: 2px solid #e67e22;
+        }
+        .elementos-ceia { font-size: 60px; animation: pulsar 2s infinite ease-in-out; display: block; }
+        @keyframes pulsar { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.1); filter: drop-shadow(0 0 10px gold); } }
+        .legenda-ceia { font-weight: bold; color: #d35400; margin-top: 15px; display: block; }
+
+        /* Estilo do Quiz */
+        .quiz-box { background: #f0f7ff; padding: 25px; border-radius: 15px; border: 2px solid var(--primary); margin-top: 40px; }
+        .pergunta { font-weight: bold; font-size: 1.2rem; margin-bottom: 15px; color: var(--primary); }
+        .btn-opcao { display: block; width: 100%; padding: 12px; margin-bottom: 10px; border: 1px solid var(--primary); border-radius: 8px; background: white; text-align: left; cursor: pointer; font-size: 1.1rem; }
+        .btn-opcao:hover { background: #e7f1ff; }
+
+        .btn-duvida { display: block; text-align: center; color: var(--primary); text-decoration: none; font-weight: bold; margin-top: 20px; border: 1px solid var(--primary); padding: 10px; border-radius: 10px; }
+        .btn-concluido { display: block; width: 100%; padding: 20px; background: var(--primary); color: white; text-decoration: none; border-radius: 10px; font-weight: bold; font-size: 1.2rem; text-align: center; margin-top: 40px; }
+    </style>
+</head>
+<body>
+
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper><div class="vw-plugin-top-wrapper"></div></div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>new window.VLibras.Widget('https://vlibras.gov.br/app');</script>
+
+    <div class="container">
+        <div class="area-botoes-audio">
+            <button onclick="lerTexto()" class="btn-audio btn-ouvirl">🔊 Ouvir Lição</button>
+            <button onclick="pararLeitura()" class="btn-audio btn-parar">🛑 Parar</button>
+        </div>
+
+        <img src="5-img.png" alt="Vida Pós-Batismo" class="header-img">
+
+        <div id="conteudo-para-ler">
+            <h1>5. Vida Pós-Batismo</h1>
+            
+            <p>O batismo não é o destino final, mas o portal de entrada para uma nova jornada de santificação. Ao sair das águas, você assume o compromisso público de viver o lema da nossa caminhada: <b>"Ultrapassando Limites"</b>. Isso significa que a vida que antes era governada pelos seus próprios desejos, agora é governada por Cristo e Sua Palavra.</p>
+
+            <h2>A Mesa do SENHOR: Comunhão Plena</h2>
+            <p>Um dos maiores privilégios após o batismo é a participação na <b>Ceia do SENHOR</b>. Este não é um lanche comum, mas um memorial sagrado onde o pão e o fruto da videira nos lembram do sacrifício de Jesus. É o momento em que o Corpo se reúne para renovar a aliança e fortalecer a comunhão.</p>
+
+            <div class="area-ceia">
+                <span class="elementos-ceia">🍞🍷</span>
+                <span class="legenda-ceia">"Fazei isto em memória de mim."</span>
+            </div>
+
+            <h2>Santificação Diária</h2>
+            <p>A santificação é o processo contínuo de se tornar mais parecido com Jesus. O batismo lavou simbolicamente o passado, mas a caminhada diária exige que você mantenha suas vestes limpas, fugindo das ciladas do pecado e buscando os frutos do Espírito. Como membro do Corpo de Cristo, suas ações agora refletem o nome do SENHOR e a saúde da igreja local.</p>
+
+            <div class="quiz-box">
+                <div class="pergunta">1. O que representa a Ceia do SENHOR?</div>
+                <button class="btn-opcao" onclick="alert('Correto! É um memorial do sacrifício de Cristo.')">A) Um memorial do sacrifício de Jesus</button>
+                <button class="btn-opcao" onclick="alert('Incorreto. Tente novamente.')">B) Apenas um ritual social</button>
+                
+                <div class="pergunta">2. O que significa Santificação?</div>
+                <button class="btn-opcao" onclick="alert('Correto! É o processo diário de ser como Jesus.')">A) Tornar-se mais parecido com Cristo todo dia</button>
+                <button class="btn-opcao" onclick="alert('Incorreto. O batismo é apenas o começo.')">B) Estar pronto e nunca mais pecar</button>
+            </div>
+
+            <a href="mailto:pastor@exemplo.com" class="btn-duvida">❔ Tem alguma dúvida? Clique aqui.</a>
+        </div>
+
+        <a href="index.html" class="btn-concluido">CONCLUÍDO - VOLTAR AO MENU</a>
+    </div>
+
+    <script>
+        let synth = window.speechSynthesis;
+        function lerTexto() {
+            synth.cancel();
+            const texto = document.getElementById('conteudo-para-ler').innerText;
+            const utterance = new SpeechSynthesisUtterance(texto);
+            utterance.lang = 'pt-BR';
+            synth.speak(utterance);
+        }
+        function pararLeitura() { synth.cancel(); }
+    </script>
+</body>
+</html>
