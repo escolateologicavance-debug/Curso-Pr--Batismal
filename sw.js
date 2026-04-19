@@ -1,4 +1,5 @@
-const CACHE_NAME = 'avance-v1';
+const CACHE_NAME = 'avance-v2';
+
 const assets = [
   'index.html',
   '1.html',
@@ -15,22 +16,54 @@ const assets = [
   '3-img.png',
   '4-img.png',
   '5-img.png',
-  '6-img.png',
-    'a-felicidade.mp3'
+  '6-img.png'
+  // ⚠️ NÃO colocar mp3 aqui
 ];
 
+// 📦 INSTALAÇÃO
+self.addEventListener('install', event => {
+  event.waitUntil(
+    caches.open(CACHE_NAME).then(cache => {
+      return cache.addAll(assets);
+    })
+  );
+  self.skipWaiting();
+});
+
+// 🔄 ATIVAÇÃO (limpa cache antigo)
+self.addEventListener('activate', event => {
+  event.waitUntil(
+    caches.keys().then(keys => {
+      return Promise.all(
+        keys.map(key => {
+          if (key !== CACHE_NAME) {
+            return caches.delete(key);
+          }
+        })
+      );
+    })
+  );
+  self.clients.claim();
+});
+
+// 🌐 FETCH
 self.addEventListener('fetch', event => {
-  // Se for áudio, tenta rede primeiro para evitar erro de Range Request do cache
-  if (event.request.url.endsWith('.mp3')) {
+  const request = event.request;
+
+  // 🔊 ÁUDIO (MP3) → SEM CACHE (evita erro de Range)
+  if (request.url.endsWith('.mp3')) {
     event.respondWith(
-      fetch(event.request).catch(() => caches.match(event.request))
+      fetch(request).catch(() => {
+        return new Response('Erro ao carregar áudio', { status: 404 });
+      })
     );
     return;
   }
 
+  // 📄 OUTROS ARQUIVOS → CACHE FIRST
   event.respondWith(
-    caches.match(event.request).then(response => {
-      return response || fetch(event.request);
+    caches.match(request).then(response => {
+      return response || fetch(request);
     })
   );
 });
