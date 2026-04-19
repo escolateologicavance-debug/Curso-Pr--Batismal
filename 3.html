@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3. O Simbolismo da Imersão - AVANCE</title>
+    <style>
+        :root { --primary: #0056b3; --water: #0077be; --text: #333; --bg: #ffffff; }
+        body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; padding: 0; background: var(--bg); color: var(--text); line-height: 1.8; overflow-x: hidden; }
+        
+        /* Controles de Áudio */
+        .area-botoes-audio { position: sticky; top: 0; background: white; padding: 10px 0; border-bottom: 2px solid #eee; z-index: 100; display: flex; gap: 10px; justify-content: center; }
+        .btn-audio { flex: 1; max-width: 200px; padding: 12px; border: none; border-radius: 8px; font-weight: bold; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 5px; }
+        .btn-ouvirl { background-color: #28a745; color: white; }
+        .btn-parar { background-color: #dc3545; color: white; }
+
+        .container { max-width: 800px; margin: 0 auto; padding: 20px; }
+        
+        /* Animação Surpreendente: O Efeito Baptizo */
+        .caixa-imersao {
+            height: 250px;
+            background: linear-gradient(180deg, #fff 0%, var(--water) 100%);
+            border-radius: 20px;
+            margin: 30px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+            border: 2px solid var(--primary);
+        }
+        .bolhas { position: absolute; bottom: -20px; width: 10px; height: 10px; background: rgba(255,255,255,0.5); border-radius: 50%; animation: subir 3s infinite; }
+        @keyframes subir {
+            0% { transform: translateY(0); opacity: 1; }
+            100% { transform: translateY(-200px); opacity: 0; }
+        }
+        .palavra-grega { font-size: 3rem; font-weight: bold; text-shadow: 2px 2px 10px rgba(0,0,0,0.3); z-index: 2; }
+
+        h1 { color: var(--primary); border-left: 6px solid var(--primary); padding-left: 15px; }
+        h2 { color: var(--primary); margin-top: 40px; }
+        p { font-size: 1.2rem; text-align: justify; }
+
+        /* Estilo Logística (Século 21) */
+        .lista-logistica { background: #f0f7ff; padding: 25px; border-radius: 15px; border: 1px dashed var(--primary); }
+        .item-check { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; font-weight: bold; color: #004080; }
+        
+        .btn-concluido { display: block; width: 100%; padding: 20px; background: var(--primary); color: white; text-decoration: none; border-radius: 12px; font-weight: bold; font-size: 1.2rem; text-align: center; margin-top: 40px; box-shadow: 0 4px 15px rgba(0,0,0,0.2); }
+    </style>
+</head>
+<body>
+
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper><div class="vw-plugin-top-wrapper"></div></div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>new window.VLibras.Widget('https://vlibras.gov.br/app');</script>
+
+    <div class="container">
+        <div class="area-botoes-audio">
+            <button onclick="lerTexto()" class="btn-audio btn-ouvirl">🔊 Ouvir</button>
+            <button onclick="pararLeitura()" class="btn-audio btn-parar">🛑 Parar</button>
+        </div>
+
+        <div id="conteudo-para-ler">
+            <h1>3. O Simbolismo da Imersão</h1>
+            
+            <p>O batismo não é uma aspersão de gotas, mas uma imersão completa. Para entender a profundidade deste ato, precisamos retornar à raiz da palavra e ao significado do sepultamento espiritual.</p>
+
+            <h2>Imersão Total: O Termo <i>Baptizo</i></h2>
+            <p>No original grego do Novo Testamento, a palavra utilizada para batismo é <b>Baptizo</b>. Diferente de outros termos que indicam apenas molhar a superfície, <i>Baptizo</i> carrega o significado estrito de mergulhar, submergir ou afundar totalmente algo em um líquido.</p>
+            
+            <div class="caixa-imersao">
+                <div class="palavra-grega">Βαπτίζω</div>
+                <p>BAPTIZO: MERGULHAR</p>
+                <div class="bolhas" style="left:20%; animation-delay: 0s;"></div>
+                <div class="bolhas" style="left:50%; animation-delay: 1s;"></div>
+                <div class="bolhas" style="left:80%; animation-delay: 0.5s;"></div>
+            </div>
+
+            <p>Este mergulho total é necessário porque o simbolismo exige uma cobertura completa. Assim como um corpo é totalmente coberto pela terra em um sepultamento, o candidato ao batismo é totalmente coberto pela água, demonstrando que nenhuma parte da sua "velha natureza" deve ficar de fora dessa morte simbólica.</p>
+
+            <h2>O Sepultamento do "Eu"</h2>
+            <p>O apóstolo Paulo explica em Romanos 6 que fomos "sepultados com Ele na morte pelo batismo". A água atua como um túmulo líquido. Ao ser mergulhado, você está declarando que o seu passado, seus erros e sua antiga identidade foram deixados no fundo daquelas águas.</p>
+            <p>A beleza do ato está na emersão: ao sair da água, você não apenas "volta a respirar", mas simboliza que está ressurgindo para uma nova vida, revestido de uma nova identidade em Cristo. O passado ficou na água; o futuro começa no instante em que você se levanta.</p>
+
+            <h2>Logística do Dia: Preparação Prática</h2>
+            <p>Para que sua mente esteja focada no espiritual, a organização prática é essencial. Aqui está o que você precisa saber para o dia do seu batismo:</p>
+
+            <div class="lista-logistica">
+                <div class="item-check">👕 O que vestir:</div>
+                <p>Roupas discretas e de cores escuras (tecidos claros tornam-se transparentes quando molhados). Evite roupas pesadas que dificultem o movimento na água.</p>
+                
+                <div class="item-check">🎒 O que levar:</div>
+                <p>Uma toalha, uma troca de roupa seca e calçados simples (chinelos). Verifique se há local para troca no local do batismo.</p>
+                
+                <div class="item-check">🗣️ O que dizer:</div>
+                <p>No momento do batismo, o ministro fará perguntas sobre sua fé. Sua resposta deve ser clara e audível: "Sim, eu creio" ou "Jesus Cristo é o meu Senhor".</p>
+            </div>
+
+            <p>Remova a ansiedade. Este é um momento de celebração e alegria. Toda a liderança estará lá para guiar cada um dos seus passos com segurança e zelo.</p>
+        </div>
+
+        <a href="index.html" class="btn-concluido">CONCLUÍDO - VOLTAR AO MENU</a>
+    </div>
+
+    <script>
+        let synth = window.speechSynthesis;
+        function lerTexto() {
+            synth.cancel();
+            const texto = document.getElementById('conteudo-para-ler').innerText;
+            const utterance = new SpeechSynthesisUtterance(texto);
+            utterance.lang = 'pt-BR';
+            synth.speak(utterance);
+        }
+        function pararLeitura() { synth.cancel(); }
+    </script>
+</body>
+</html>
